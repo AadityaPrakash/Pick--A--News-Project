@@ -1,0 +1,174 @@
+  <!DOCTYPE html>
+  <html lang="de|en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="description" content="Database and Web-Techniques Project at TU Chemnitz 2019.">
+  <meta name="author" content="Aaditya Prakash & Ila Gautam">
+  <link rel="icon" href="#">
+  <title>Practical Task SS-2019</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="script/css/bootstrap.min.css" rel="stylesheet">
+  <link href="script/css/font-awesome.min.css" rel="stylesheet">
+  <link href="script/css/animsition.min.css" rel="stylesheet">
+  <link href="script/css/animate.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="script/css/style.css" rel="stylesheet"> </head>
+
+  <body class="home">
+    <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
+
+      <!-- <section class="hero bg-image" data-image-src="script/images/image01.jpg">
+        <div class="hero-inner">
+          <div class="container text-center hero-text font-white">
+            <h2 class="font-white space-xs">Datenbanken Und Webtechniken</h2>
+            <h1>Practical Task - Summer Semester 2019</h1>
+          </div>
+        </div>
+      </section> -->
+
+      <!--header starts-->
+      <header id="header" class="header-scroll top-header headrom">
+         <!-- .navbar -->
+         <nav class="navbar navbar-dark">
+            <div class="container">
+               <a class="navbar-brand" href="index.html">Pick-'A'-News<img class="img-rounded" src="" alt=""> </a>
+               <button class="navbar-toggler hidden-lg-up " type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
+                 <div class="collapse navbar-toggleable-md float-lg-right" id="mainNavbarCollapse">
+                  <ul class="nav navbar-nav">
+
+                      <li class="nav-item"> <a class="nav-link active" id="btn_feeds" href="#feeds">Feeds</a> </li>
+                      <li class="nav-item"> <a class="nav-link" id="btn_providers" href="#providers">Providers</a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Feed Management</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" id="btn_management_new_feed" href="#management">Insert New Provider</a>
+                             <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="/feeds/export">Export Feeds</a>
+                             <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" id="btn_reload_database" href="#reload">Reload Database</a>
+                             <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" id="btn_delete_database" href="#delete">Delete Database</a>
+                        </div>
+                      </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Settings</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" id="btn_update_interval" href="#setInterval">Update Interval</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" id="btn_update_feed_age" href="#setFeedAge">Web Feed Age</a></div>
+                      </li>
+                     <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Export</a>
+                        <div class="dropdown-menu">
+                           <a class="dropdown-item" href="pricing.html">RSS</a>
+                           <div class="dropdown-divider"></div>
+                           <a class="dropdown-item" href="contact.html">ATOM</a>
+                           <div class="dropdown-divider"></div>
+                           <a class="dropdown-item" href="submition.html">JSON</a>
+                        </div>
+                     </li> -->
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <!-- /.navbar -->
+      </header>
+
+      <section class="featured-restaurants">
+
+        <div class="container">
+          <div class="title text-xs-center m-b-30">
+            <h2 id="display_heading"></h2>
+            <p class="lead"></p>
+          </div>
+
+          <div id="display_feed_items" class="row">
+            <div class="feedItem-listing">
+          <!-- Dynamic code is generated here! -->
+
+          </div>
+
+          <div id="display_insert_feed" class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6">
+              <div class="widget">
+                <div class="widget-body">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Display Name</label>
+                        <input class="form-control" type="text" placeholder="Display name of the Web Feed Provider" id="feed-name"> <small id="emailHelp" class="form-text text-muted"> (Mandatory) Input any name for the provider.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">URL</label>
+                      <input class="form-control" type="url" placeholder="RSS feed URL" id="feed-url"> <small class="form-text text-muted">(Mandatory) Input a valid RSS feed URL.</small>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Image URL</label>
+                      <input class="form-control" type="url" placeholder="Input Url of Provider's logo" id="image-url"> <small class="form-text text-muted"> (Optional) Input url of logo of the web feed provider. </small>
+                    </div>
+                    <p>
+                      <button id="submit_new_feed" type="button" class="btn theme-btn">Submit</button>
+                      <button id="update_new_feed" type="button" class="btn theme-btn">Update</button>
+                    </p>
+                  </div>
+                </div>
+                        <!-- end: Widget -->
+                      </div>
+          </div>
+
+          <div id="update_interval" class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6">
+              <div class="widget">
+                <div class="widget-body">
+                  <label for="exampleSelect1">Update Interval (in mins)</label>
+                   <input type="text" class="form-control" id="selectInterval" placeholder="Input number in mins"> <span class="input-group-btn">
+                    <label for="exampleSelect1">The time interval for the web feeds update blockage.</label>
+                      <p><button id="btn_interval_submit" type="button" class="btn theme-btn">Submit</button></p>
+                 </span></div>
+              </div>
+
+          </div></div>
+
+          <div id="update_feed_age" class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6">
+              <div class="widget">
+                <div class="widget-body">
+                  <label for="exampleSelect1">Web Feed Age (in days)</label>
+                   <input type="text" class="form-control search-field" id="selectAge" placeholder="Input number in days"> <span class="input-group-btn">
+                    <label for="exampleSelect1">The time frequency for automatic deletion of old web feeds.</label>
+                      <p><button id="btn_age_submit" type="button" class="btn theme-btn">Submit</button></p>
+                 </span></div>
+              </div>
+
+
+
+
+
+
+
+          </div></div>
+
+
+        </section>
+      </div>
+
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <script src="script/js/library/jquery.min.js"></script>
+      <script src="script/js/library/tether.min.js"></script>
+      <script src="script/js/library/bootstrap.min.js"></script>
+      <script src="script/js/library/animsition.min.js"></script>
+      <script src="script/js/library/bootstrap-slider.min.js"></script>
+      <script src="script/js/library/template.min.js"></script>
+      <script src="script/js/library/moment-with-locales.js"></script>
+      <script src="script/custom.js"></script>
+    </body>
+  </html>

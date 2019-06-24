@@ -1,0 +1,19 @@
+{
+  "name": "db-project-2019",
+  "version": "1.0.0",
+  "description": "Database and Web Techniques Project at TU Chemnitz 2019",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "feed": "^3.0.0",
+    "mongodb": "^3.0.10",
+    "nodemon": "*",
+    "rss-parser": "^3.7.1"
+  },
+  "author": "Aaditya Prakash",
+  "license": "ISC"
+}
